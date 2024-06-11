@@ -6,7 +6,7 @@ RUN gradle build
 # Package stage
 
 FROM openjdk:17
-ENV JAR_NAME=app.jar
+ENV JAR_NAME=*.jar
 ENV APP_HOME=/usr/app/
 WORKDIR $APP_HOME
 COPY --from=BUILD $APP_HOME .
