@@ -7,7 +7,7 @@ RUN gradle build
 
 FROM openjdk:17
 ENV JAR_NAME=*.jar
-ENV APP_HOME=/usr/app/
+ENV APP_HOME=/usr/app
 WORKDIR $APP_HOME
 COPY --from=BUILD $APP_HOME .
 EXPOSE 8080
